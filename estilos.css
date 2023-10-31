@@ -65,3 +65,34 @@ body{
     color: #a8cece;
     transform: scale(1,1);
 }
+.informacion{
+    height: 100%;
+    width: 100%;
+    min-height: 100vh;
+    background: #eceff1;
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap:2rem;
+}
+section{
+    padding: 0 19%;
+}
+.informacion-text h5{
+    font-size: 14px;
+    font-weight: 400;
+    color: #42586c;
+    margin-bottom: 40px;
+}
+.informacion-text p{
+    color:#546262;
+    font-size: 15px;
+    line-height: 1.9;
+    margin-bottom: 40px;
+
+}
+.informacion-img img{
+    width: 700px;
+    height: auto;
+}
