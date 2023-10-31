@@ -79,11 +79,12 @@ body{
 section{
     padding: 0 19%;
 }
-.informacion-text h5{
-    font-size: 14px;
-    font-weight: 400;
+.informacion-text h1{
+    font-family: 'Julius Sans One', sans-serif;
+    font-size: 90px;
+    line-height: 1;
     color: #42586c;
-    margin-bottom: 40px;
+    margin: 0 0 45px;
 }
 .informacion-text p{
     color:#546262;
