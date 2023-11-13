@@ -12,6 +12,7 @@ body{
     background-color: white;
     position: relative;
 }
+
 .header{
     background-color: #42586c;
     display: flex;
@@ -20,6 +21,7 @@ body{
     height: 85px;
     padding: 5px 10%;
 }
+
 .header .logo{
     cursor:pointer;
 }
