@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=JetBrains+Mono:ital,wght@1,500&family=Julius+Sans+One&display=swap');
+@import url(https://db.onlinewebfonts.com/c/381560810e4c36d16a07abb03254e264?family=JejuGothic);
 *{
     box-sizing: border-box;
     margin: 0;
@@ -82,12 +83,19 @@ body{
 section{
     padding: 0 19%;
 }
-.informacion-text h1{
-    font-family: 'Julius Sans One', sans-serif;
-    font-size: 90px;
+.informacion-text h2{
+    font-family: 'JejuGothic', sans-serif;
+    font-size: 40px;
     line-height: 1;
     color: #42586c;
-    margin: 0 0 45px;
+    margin: 0 0 0px;
+}
+.informacion-text h5{
+    font-family: 'JejuGothic', sans-serif;
+    font-size: 20px;
+    line-height: 1;
+    color: #42586c;
+    margin: 0 0 5px;
 }
 .informacion-text p{
     color:#546262;
