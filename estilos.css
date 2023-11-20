@@ -7,12 +7,46 @@
     font-family: 'JetBrains Mono',sans-serif;
     font-size: 20px;
 }
+:root {
+    --border: 1px solid white;
+    --borderbox:1px solid #42586c;
+  }
+html{
+    font-size: 62.5%;
+    overflow-x: hidden;
+    scroll-padding-top: 9rem;
+    scroll-behavior: smooth;
+}
+html::-webkit-scrollbar{
+    width: .8rem;
+}
+html::-webkit-scrollbar-track{
+    background: transparent;
+}
 
+html::-webkit-thumb{
+    background: #42586c;
+    border-radius: 5rem;
+}
 body{
     background-color: white;
     position: relative;
 }
-
+section{
+    padding:2rem 7%;
+}
+.heading{
+    text-align:center;
+    color:#42586c;
+    text-transform:uppercase;
+    padding-bottom: 3.5rem;
+    font-size: 4rem;
+}
+.heading span{
+    color: #a8cece;
+    text-transform: uppercase;
+    font-size: 4rem;
+}
 .header{
     background-color: #42586c;
     display: flex;
@@ -20,40 +54,44 @@ body{
     align-items: center;
     height: 85px;
     padding: 5px 10%;
+    border-bottom: var(--border);
+    position: fixed;
+    top:0;left:0;right:0;
+    z-index: 1000;
+}
+.header .logo a{
+    display:inline-block;
+    font-size: 45px;
+    color: #eceff1;
+    text-decoration: none;
 }
 
 .header .logo{
     cursor:pointer;
+    height: 50px;
 }
-.logo{
-    height: 70px;
+.header .logo .a{
+    text-overflow: hidden;
 }
 .header .logo .img{
-    height: 70px;
+    height: 6rem;
     width: auto;
     transition: all 0.3s;
 }
 .header .logo img:hover{
     transform: scale(1,1);
 }
-.header .nav-links li{
-    list-style: none;
-}
-.header .nav-links li{
-    display: inline-block;
-    padding: 0 20px;
-}
-.header .nav-links li:hover{
-    transform: scale(1,1);
-}
-.header .nav-links a{
-    font-size: 700;
+.header .navbar a{
+    margin:0 1 rem;
+    font-size: 1.6rem;
     color: #eceff1;
     text-decoration: none;
-
 }
-.header .nav-links li a:hover{
+
+.header .navbar a:hover{
     color: #a8cece;
+    border-bottom: .1rem solid #a8cece;
+    padding-bottom: .5rem;
 }
 .header .btn button{
     font-weight: 700;
@@ -70,57 +108,256 @@ body{
     color: #a8cece;
     transform: scale(1,1);
 }
-
-.informacion{
-    height: 100%;
-    width: 100%;
-    min-height: 100vh;
+.header .icons div{
+    color: #eceff1;
+    cursor:pointer;
+    font-size:2.5rem;
+    margin-left:2rem;
+}
+.header .icons div:hover{
+    color: #a8cece;
+}
+#menu-btn{
+    display: none;
+}
+.header .search-form{
+    position: absolute;
+    top: 115%;right:7%;
     background: #eceff1;
-    position: relative;
-    display: grid;
-    grid-template-columns: repeat(2,1fr);
+    width:50rem;
+    height: 5rem;
+    display: flex;
     align-items: center;
+    transform: scaleY(0);
+    transform-origin: top;
+}
+.header .search-form.active{
+    transform: scaleY(1);
+}
+.header .search-form input{
+    height:100%;
+    width:100%;
+    font-size: 1.6rem;
+    color:#a8cece;
+    padding:1rem;
+    text-transform: none;
+}
+.header .search-form label{
+    cursor: pointer;
+    font-size: 2.2rem;
+    margin-right: 1.5rem;
+    color: #a8cece;
+}
+.header .search-form:hover{
+    color:#42586c
+}
+.home{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    background-color: #eceff1;
+    background-size: cover;
+    background-position:center ;
+    grid-template-columns: repeat(2,1fr);
     gap:2rem;
 }
 section{
     padding: 0 19%;
 }
-.informacion-text h2{
+.home .informacion-text h2{
     font-family: 'JejuGothic', sans-serif;
     font-size: 40px;
     line-height: 1;
     color: #42586c;
     margin: 0 0 0px;
+
 }
-.informacion-text h5{
+.home .informacion-text h5{
     font-family: 'JejuGothic', sans-serif;
     font-size: 20px;
     line-height: 1;
     color: #42586c;
     margin: 0 0 5px;
 }
-.informacion-text p{
+.home .informacion-text p{
     color:#546262;
     font-size: 15px;
     line-height: 1.9;
     margin-bottom: 40px;
 
 }
+.btn button{
+    font-weight: 700;
+    color:#42586c;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+.btn button:hover{
+    background-color: #e2f1f8;
+    color: #a8cece;
+    transform: scale(1,1);
+}
 .informacion-img img{
     width: 400px;
     height: auto;
+    border-radius: 75%;
 }
-footer{
-    width: 100%;
-    position: absolute;
-    bottom: 0;
-    left:0;
-    padding: 0.5rem 3%;
-    background-color: #42586c;
+.membresias{
+    background-color: #eceff1;
+}
+
+.membresias .box-container{
+    display: grid;
+    grid-template-columns: repeat(auto-fit,minmax(30rem,1fr));
+    gap: 1.5rem;
+}
+
+.membresias .box-container .box{
+    padding: 5rem;
+    text-align: center;
+    border:var(--borderbox)
+}
+
+.membresias .box-container .box img{
+    height: 10rem;
+}
+.membresias .box-container .box h3{
+    color: #42586c;
+    font-size: 2rem;
+    padding: 1rem 0;
+
+}
+.membresias .box-container .box .price{
+    color: #42586c;
+    font-size: 2.5rem;
+    padding: .5rem 0;
+
+}
+.membresias .box-container .box .price span{
+    font-size: 1.5rem;
+    text-decoration: line-through;
+    
+
+}
+.membresias .box-container .box:hover{
+    background: #e2f1f8;
+}
+
+.membresias .box-container .box:hover>*{
+    color: #a8cece;
+}
+.membresias-item{
+    margin:1rem 1.5rem;
+    cursor: pointer;
+    opacity:0.6;
+    text-decoration: none;
+    color: #42586c;
+}
+.membresias-item:hover{
+    opacity:1;
+    text-decoration: none;
+}
+.contactanos{
+    background-color: #eceff1;
+}
+
+.contactanos .row{
     display: flex;
-    justify-content: center;
     align-items: center;
-    flex-direction:column;
+    background: #eceff1;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.contactanos .row .map{
+    flex: 1 1 45rem;
+    width: 100%;
+    object-fit: cover;
+}
+
+.contactanos .row form{
+    flex: 1 1 45rem;
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.contactanos .row form h3{
+    text-transform: uppercase;
+    font-size: 3.5rem;
+    color: #a8cece;
+}
+.contactanos .row form .inputBox{
+    display: flex;
+    align-items: center;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    background: #42586c;
+    border: var(--borderbox);
+}
+
+.contactanos .row form .inputBox span{
+    color: #e2f1f8;
+    font-size: 2rem;
+    padding-left: 2rem;
+
+}
+.contactanos .row form .inputBox input{
+    width: 100%;
+    padding:2rem;
+    font-size:1.7rem;
+    color: #eceff1;
+    text-transform: none;
+    background: none;
+
+}
+
+.contactanos .btn{
+    font-weight: 700;
+    color:#42586c;
+    padding: 9px 25px;
+    background: #eceff1;
+    border: none;
+    border-radius: 50px;
+    cursor:pointer;
+    transition: all 0.3s ease 0s;
+}
+.contactanos .btn:hover{
+    background-color: #e2f1f8;
+    color: #a8cece;
+    transform: scale(1,1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.footer{
+    background-color: #42586c;
+    text-align: center;
 }
 .logo-footer{
     height: 60px;
@@ -162,17 +399,82 @@ footer{
     color: #f2f2f2;
     font-size:18px;
 }
-.menu-item{
-    margin:1rem 1.5rem;
-    cursor: pointer;
-    opacity:0.6;
+.footer .links{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 2rem 0;
+    gap:1rem;
+    text-decoration: none;
 }
-.menu-item:hover{
-    opacity:1;
+.footer .links a{
+    padding: .7rem 2rem;
+    color: #f2f2f2;
+    border: var(--border);
+    font-size: 2rem;
+    text-decoration: none;
 }
+
+.footer .links a:hover{
+    color: #a8cece;
+}
+
 .copyright{
     color:#f2f2f2;
     opacity:0.3;
     text-align: center;
     font-size: 12px;
+}
+
+
+
+
+@media(max-width:991px){
+    html{
+        font-size: 55%;
+
+    }
+    .header{
+        padding: 1.5rem 2rem;
+    }
+    section{
+        padding:2rem ;
+    }
+}
+
+
+
+@media(max-width:768px){
+    #menu-btn{
+        display: inline-block;
+    }
+    .header .navbar{
+        position: absolute; 
+        top: 100%;right: -100%;
+        background: #42586c;
+        width: 30rem;
+        height: calc(100vh - 9.5rem);
+    }
+    .header .navbar .active{
+        right: 0;
+    }
+    .header .navbar a{
+        color: #42586c;
+        display: block;
+        margin: 1.5rem;
+        padding:.5rem;
+        font-size: 2rem;
+    }
+
+    .header .search-form{
+        width: 90%;
+        right: 2rem;
+    }
+}
+@media(max-width:450px){
+    html{
+        font-size: 55%;
+
+    }
+
 }

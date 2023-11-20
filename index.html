@@ -6,41 +6,103 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>EcoTrack | +Ganancias -Perdidas</title>
     <link rel="stylesheet" href="estilos.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
     <header class="header">
-        <div class="logo">
-            <a href="#">
+        <a href="#" class="logo">
                 <img class="logo" src="sources/logo.png" alt="logo">
-            </a>
-        </div>
+        </a>   
         <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="#" class="EcoTrack">EcoTrack</a></li>
-                <li><a href="#">Servicios</a></li>
-                <li><a href="#">Noticias</a></li>
-            </ul>
+            <a href="#Nosotros">Nosotros</a>
+            <a href="#Membresias">Membresias</a>
+            <a href="#Contactanos">Contactanos</a>
+
+
         </nav>
-        <a href="#" class="btn"><button>Registrate</button></a>
+        <div class="icons">
+            <div class="fas fa-search" id="search-btn"></div>
+            <div class="fas fa-bars" id="menu-btn"></div>
+        </div>
+        <div class="search-form">
+            <input type="search" id="search-box" placeholder="Busca aqui...">
+            <label for="search-box"class="fas fa-search"></label>
+        </div>
+
     </header>
     
-    <section class="informacion">
+    <section class="home" id="Nosotros">
         <div class="informacion-text">
-            <h2>Acerca de Nosotros</h2>
+            <h2>+Ganancias -Perdidas</h2>
             <h5>EcoTrack</h5>
             <p>Es una plataforma digital que se ha propuesto revolucionar la industria de seguimiento y trazabilidad con un enfoque ecológico y sostenible. La cual está plataforma tecnológica avanzada, “EcoTrack”, estará diseñada para rastrear y documentar el ciclo de vida de productos desde su origen hasta su destino final, todo ello con el objetivo de promover la transparencia, la responsabilidad ambiental y la sostenibilidad en cada paso del camino. </p>
+            <a href="#" class="btn"><button>Comprar membresia</button></a>
+            <a href="#" class="btn"><button>Ver membresias</button></a>
         </div>
         <div class="informacion-img"><img src="sources/img1.jpeg" alt="imagen principal"></div>
     </section>
-    <footer class="footer">
-        <img src="sources/logo.png" alt="Logo" class="logo-footer">
+    <section class="membresias" id="Membresias">
+        <h1 class="heading">Nuestras <span>membresias</span></h1>
+        <div class="box-container">
+            <div class="box">
+                <img src="sources/basica.png" alt="Picture of Membresia Free">
+                <h3>Membresia Vip</h3>
+                <div class="price">$00.00 <span>00.00</span></div>
+                <a href="#" class="btn">Comprar Ahora</a>
+            </div>
+            <div class="box">
+                <img src="sources/vip.png" alt="Picture of Membresia Special">
+                <h3>Membresia Special</h3>
+                <div class="price">$10.59 <span>15.99</span></div>
+                <a href="#" class="btn">Comprar Ahora</a>
+            </div>
+            <div class="box">
+                <img src="sources/premium.png" alt="Picture of Membresia Premium">
+                <h3>Membresia Premium</h3>
+                <div class="price">$28.50 <span>35.99</span></div>
+                <a href="#" class="btn">Comprar Ahora</a>
+            </div>
+        </div>
+    </section>
+    <section class="contactanos" id="Contactanos">
+        <h1 class="heading"><span>Contac</span>tanos</h1>
+        <div class="row">
+            <iframe class="map" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3899.7439191971735!2d-77.0101666596408!3d-12.197819988100651!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x9105b9e0f449b10f%3A0x876705c16ffc17d7!2sUPC%20Campus%20Villa!5e0!3m2!1ses!2spe!4v1700468127693!5m2!1ses!2spe"  allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <form action="">
+                <h3>Contactanos</h3>
+                <div class="inputBox">
+                    <span class="fas fa-user"></span>
+                    <input type="text" placeholder="name">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-envelope"></span>
+                    <input type="email" placeholder="email">
+                </div>
+                <div class="inputBox">
+                    <span class="fas fa-phone"></span>
+                    <input type="number" placeholder="number">
+                </div>
+                <input type="submit"value="contactanos ahora" class="btn">
+
+            </form>
+        </div>
+    </section>
+    <section class="footer">
+        <a href="#"><img src="sources/logo.png" alt="Logo" class="logo-footer"></a>
         <div class="social-icons-container">
             <a href="https://www.facebook.com" class="social-icon"></a>
             <a href="https://www.instagram.com" class="social-icon"></a>
             <a href="https://www.x.com" class="social-icon"></a>
             <a href="https://www.linkedin.com" class="social-icon"></a>
         </div>
+        <div class="links">
+            <a href="#Nosotros">Nosotros</a>
+            <a href="#Membresias">Membresias</a>
+            <a href="#Contactanos">Contactanos</a>
+
+        </div>
         <span class="copyright">&copy;2023, EcoTrack. Todos los derechos reservados.</span>
-    </footer>
+    </section>
+<script src="js/script.js"></script>
 </body>
 </html>
